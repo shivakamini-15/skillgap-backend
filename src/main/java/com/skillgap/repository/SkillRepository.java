@@ -1,0 +1,8 @@
+package com.skillgap.repository;
+
+import com.skillgap.entity.Skill;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SkillRepository extends JpaRepository<Skill, Long> {
+    boolean existsByNameIgnoreCase(String name);
+}
